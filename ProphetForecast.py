@@ -6,7 +6,7 @@ from datetime import date
 import yfinance as yf
 from prophet import Prophet
 
-a 
+
 #Get Data
 START = "2017-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
