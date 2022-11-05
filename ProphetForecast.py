@@ -6,6 +6,8 @@
 from datetime import date
 import yfinance as yf
 from prophet import Prophet
+#Interactivity
+from prophet.plot import plot_plotly, plot_components_plotly
 
 
 #Get Data
@@ -38,11 +40,19 @@ forecast[["ds", "yhat", "yhat_lower", "yhat_upper"]].tail()
 print(forecast[["ds", "yhat", "yhat_lower", "yhat_upper"]].tail())
 
 #plot forecast
-figure1 = m.plot(forecast)
+# figure1 = m.plot(forecast)
 
-#plot trend, weekly, yearly forecast
+# #plot trend, weekly, yearly forecast
 
-figure2 = m.plot_components(forecast)
+# figure2 = m.plot_components(forecast)
+
+# figure1.show()
+# figure2.show()
+
+
+#Interactive plots
+figure1 = plot_plotly(m, forecast)
+figure2 = plot_components_plotly(m,forecast)
 
 figure1.show()
 figure2.show()
