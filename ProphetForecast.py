@@ -1,7 +1,8 @@
 #install prophet and yfinance
 #in command line: python - m install prophet
 #in command line: pip install yfinance
-
+#can use plotly to make interactive plots, install plotly 4.0 or above seperately
+#also need to install notebook and ipywidgets packages
 from datetime import date
 import yfinance as yf
 from prophet import Prophet
